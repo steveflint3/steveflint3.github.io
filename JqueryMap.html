@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\lib\raphael.js"></script>
+	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\jquery.usmap.js"></script>
+	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\example\color.jquery.js"></script>
+	
+	
+</head>
+<style type="text/css">
+dt {
+width: 10px;
+height: 20px;
+display: inline-block;
+overflow: hidden;
+border: 1px solid #000;
+}
+.stateRange1 {background-color: #00478d; color: #00478d; }
+.stateRange2 {background-color: #006edc; color: #006edc; }
+.stateRange3 {background-color: #2b95ff; color: #2b95ff; }
+.stateRange4 {background-color: #7abcff; color: #7abcff; }
+.stateRange5 {background-color: #c8e4ff; color: #c8e4ff;}
+dd {
+display: inline-block;
+width: 10em;
+margin: 0 0 0 1em;
+}
+
+</style>
+<body>
+	<div class="container" style="padding-top: 40px">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="clicked-state"></div>
+				
+				<div id="map" style="width: 600px; height: 450px;"></div>
+			</div>
+		</div>
+	</div>	
+<script type="text/javascript">
+/*<![CDATA[*/
+var stateList = {'AL': 13, 
+'AK': 29, 
+'AZ': 43, 
+'AR': 4, 
+'CA': 56, 
+'CO': 24, 
+'CT': 20, 
+'DE': 19, 
+'DC': 34, 
+'FL': 27, 
+'GA': 6, 
+'HI': 25, 
+'ID': 9, 
+'IL': 67, 
+'IN': 23, 
+'IA': 6, 
+'KS': 2, 
+'KY': 14, 
+'LA': 22, 
+'ME': 40, 
+'MD': 70, 
+'MA': 58, 
+'MI': 15, 
+'MN': 32, 
+'MO': 7, 
+'MT': 4, 
+'NE': 11, 
+'NV': 46, 
+'NH': 37, 
+'NJ': 59, 
+'NM': 35, 
+'NY': 63, 
+'NC': 16, 
+'ND': 2, 
+'OH': 24, 
+'OK': 10, 
+'OR': 38, 
+'PA': 8, 
+'RI': 51, 
+'SC': 5, 
+'SD': 7, 
+'TN': 8, 
+'TX': 14, 
+'UT': 16, 
+'VT': 49, 
+'VA': 62, 
+'WA': 23, 
+'WV': 3, 
+'WI': 12, 
+'WY': 6};
+
+//for each key in the object stateList, get the number, stateList[key]
+
+//declare the variable color+some integer, using a variable named i that you increase at each step of the iteration
+var color = []; 
+$( document ).ready(function() {
+	for (var key in stateList){
+	var value = stateList[key]
+	if(value < 26){ 
+		color.push("#00478d");
+	}
+	else if (value > 25){
+		color.push("#c8e4ff");
+	};
+	console.log ("1 color --" + color);
+	};
+});	
+
+//declare i outside of the iteration and then inside the iteration add the step i++ at the end to increase i.  
+//This will ensure that we have the correct number attached to the color variable. declare i = 1
+
+//then check the which range the number falls into.  This will require 5 different if statements (use if and else if for efficiency)
+//if the number falls in a particular range, assign the associated color to the variable color+i, and then when the plugin reads each
+//color+i variable, there will be a color value stored in it
+$('#map').usmap({
+   stateSpecificHoverStyles: {
+    'AK': {fill: color[0]},
+    'AZ': {fill: color[1]},
+	'AR': {fill: color[2]},
+	'CA': {fill: color[3]},
+	'CO': {fill: color[4]},
+	'CT': {fill: color[5]},
+	'DE': {fill: color[6]},
+	'DC': {fill: color[7]},
+	'FL': {fill: color[8]},
+	'GA': {fill: color[9]},
+	'HI': {fill: color[10]},
+	'ID': {fill: color[11]},
+	'IL': {fill: color[12]},
+	'IN': {fill: color[13]},
+	'IA': {fill: color[14]},
+	'KS': {fill: color[15]},
+	'KY': {fill: color[16]},
+	'LA': {fill: color[17]},
+	'ME': {fill: color[18]},
+	'MD': {fill: color[19]},
+	'MA': {fill: color[20]},
+	'MI': {fill: color[21]},
+	'MN': {fill: color[22]},
+	'MO': {fill: color[23]},
+	'MT': {fill: color[24]},
+	'NE': {fill: color[25]},
+	'NV': {fill: color[26]},
+	'NH': {fill: color[27]},
+	'NJ': {fill: color[28]},
+	'NM': {fill: color[29]},
+	'NY': {fill: color[30]},
+	'NC': {fill: color[31]},
+	'ND': {fill: color[32]},
+	'OH': {fill: color[33]},
+	'OK': {fill: color[34]},
+	'OR': {fill: color[35]},
+	'PA': {fill: color[36]},
+	'RI': {fill: color[37]},
+	'SC': {fill: color[38]},
+	'SD': {fill: color[39]},
+	'TN': {fill: color[40]},
+	'TX': {fill: color[41]},
+	'UT': {fill: color[42]},
+	'VT': {fill: color[43]},
+	'VA': {fill: color[44]},
+	'WA': {fill: color[45]},
+	'WV': {fill: color[46]},
+	'WI': {fill: color[47]},
+	'WY': {fill: color[48]}
+  },
+  // The click action
+  click: function(event, data) {
+  alert("clicked on: " + data.name);
+    $('#clicked-state')
+      .text('You clicked: '+data.name)
+      .parent().effect('highlight', {color: '#C7F464'}, 7000);
+  }
+});
+/*]]>*/	
+
+
+
+</script>
+</body>
+</html>
