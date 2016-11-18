@@ -1,0 +1,355 @@
+<!-- Proficient in HTML/CSS for front end software development
+Proficient at using Bootstrap front end framework with HTML/CSS to produce webpages
+Proficient at using JQuery JavaScript library to manipulate front end interactive functionality
+Proficient at implementing JavaScript libraries and plug-ins to provide functionality for webpages
+Proficient at debugging JavaScript and JQuery during front end development
+Proficient at using JSON data structuture to manipulate/analyze data
+Familiar with and able to learn aspects of object oriented programming through work with JavaScript
+Familiar with writing and manipulating native JavaScript and JavaScript objects in addition to JQuery
+ -->
+ <!-- https://plugins.jquery.com/pdfSlider/ -->
+<!--  use the us map plugin to show skill.
+ use pdfslider to show schoolwork.
+ use modal to connect to us map plugin.
+ use bootstrap tabs to display different items.
+ top of page put header with name and objective statement.
+ put picture and education credentials (credentials in a panel) side by side.
+ make multiple tabs
+ one tab will be a pdf viewer of past papers
+ another tab for work history and references
+ another tab with embedded digital story about edgar allan poe
+ javascript plugin
+ computer skills tab
+ and another tab can be the code with the page -->
+ 
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\lib\raphael.js"></script>
+	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\jquery.usmap.js"></script>
+	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\example\color.jquery.js"></script>
+	
+	
+</head>
+<style type="text/css">
+body {
+    background-color: #DDDDDD;
+}
+div {
+    background-color: white;
+}
+#tab-outer {
+  position:relative;
+  font:normal 12px Arial,Sans-Serif;    
+}
+
+#tab-outer * {
+  margin:0px 0px;
+  padding:0px 0px;    
+}
+
+#tab-wrapper {
+  list-style:none;
+  height:30px;
+}
+
+#tab-wrapper li {
+  margin:0px 0px 0px 2px;
+  float:left;
+  font-weight:bold;
+}
+
+#tab-wrapper li a {
+  display:block;
+  padding:0px 15px;
+  line-height:30px;
+  text-decoration:none;
+  color:white;
+  background-color:#CD4A07; 
+}
+
+#tab-wrapper li.active a {
+  background-color:#174A63;
+}
+
+#tab-body > div {
+  background-color:#174A63;
+  color:white;
+  padding:10px 15px;
+  border-bottom:4px solid #CD4A07;
+  height:350px; /* Contoh */    
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+dt {
+width: 10px;
+height: 30px;
+display: inline-block;
+overflow: hidden;
+border: 1px solid #000;
+}
+.stateRange1 {background-color: #00478d; color: #00478d; }
+.stateRange2 {background-color: #006edc; color: #006edc; }
+.stateRange3 {background-color: #2b95ff; color: #2b95ff; }
+.stateRange4 {background-color: #7abcff; color: #7abcff; }
+.stateRange5 {background-color: #c8e4ff; color: #c8e4ff;}
+dd {
+display: inline-block;
+width: 10em;
+margin: 0 0 0 1em;
+}
+
+</style>
+<body>
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="https://www.linkedin.com/in/steve-flint-77279aa9?trk=nav_responsive_tab_profile">My Linkedin Page</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="https://jquery.com/">JQuery</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="https://www.javascript.com/">JavaScript</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left hidden">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<center><img src="http://static.comicvine.com/uploads/original/11119/111190794/4789181-6995769998-ivand.jpg" height="192" width="280"/></center>
+			</div>
+			<div id="objectiveDiv" class="col-md-9">
+			<h1>Steve Flint</h1>
+			<h4>Recent graduate seeking to leverage education and customer service background into a new career in the fields of history, software development, intelligence analysis, law or technical writing/editing; open to new opportunities related to professional research.</h3>
+			<h5>Towson University: Bachelor of Science in History with minor in Asian Studies (2007)</h4>
+			<h5>University of Maryland, Baltimore County: Master of Arts in Historical Studies (2014)</h4>
+			</div>
+		<div>
+	</div>
+	
+	<div class="padding-0 valign-top" style="display: table; width: 100%;"id="tableStuff
+			<div id="tab-outer">
+				<ul id="tab-wrapper">
+					<center><li><a href="#tab1">Programming Background</a></li></center>
+					<center><li><a href="#tab2">Relevant Skills and</br> Research Experience</a></li></center>
+					<center><li><a href="#tab3">Teaching Experience</a></li></center>
+					<center><li><a href="#tab4">Service Industry</br> Employment History</a></li></center>
+					<center><li><a href="#tab5">My Digital Video</a></li></center>
+					<center><li><a href="#tab6">Questionnaire</a></li></center>
+				</ul>
+				<div id="tab-body">
+					<div id="tab1">
+						<h2>Programming Background</h2>
+							<ul>
+								<li>Proficient in HTML/CSS for front end software development</li>
+								<li>Proficient at using Bootstrap front end framework with HTML/CSS to produce webpages</li>
+								<li>Proficient at using JQuery JavaScript library to manipulate front end interactive functionality</li>
+								<li>Proficient at implementing JavaScript libraries and plug-ins to provide functionality for webpages</li>
+								<li>Proficient at debugging JavaScript and JQuery during front end development</li>
+								<li>Proficient at using JSON data structuture to manipulate/analyze data</li>
+								<li>Familiar with and able to learn aspects of object oriented programming through work with JavaScript</li>
+								<li>Familiar with writing and manipulating native JavaScript and JavaScript objects in addition to JQuery</li>
+							</ul>
+					</div>
+					<div id="tab2">
+						<h2>Relevant Skills and Research Experience</h2>
+							<ul>
+								<li>Effective writer/editor</li>
+								<li>communicates complex ideas clearly</li>
+								<li>Public Speaking</li>
+								<li>Thrives in team or independent work settings</li>
+								<li>Familiar with multiple forms of source material including declassified government documents and witness statements</li>
+								<li>Microsoft Word, Power Point and Excel</li>
+								<li>Experience with publication legality, source citation, and writing style requirements</li>
+								<li>Simultaneously manage multiple research projects</li>
+								<li>Teaching</li>
+								<li>Analyzes/synthesizes information</li>
+								<li>Knowledge of 19th/20th Century East and Southeast Asian History; Chinese communism; use of terrorism and nonviolent mass mobilization methods during Vietnam War; Chinese Philosophy, American history and public history</li>
+							</ul>
+					</div>
+					<div id="tab3">
+						<h2>Teaching Experience</h2>
+							<ul>
+								<li><h3>Microsoft Office Instructor for Baltimore City Community College, 2016:</h3>-Supervisor: Lauren Gilwee (410-580-2757)</br>
+								Taught course on Microsoft Office with heavy emphasis on Outlook.  The course was designed for students to pass a certification test in Microsoft Outlook.</li>
+								<li><h3>Substitute Teacher for Baltimore County Public School System, 2008-2009:</h3>-No Supervisor</br>
+								Provided instruction of students by following plans/materials and presenting them using instructional techniques which met the needs of all students. Provided an atmosphere and environment conducive to the intellectual, physical, social and emotional development of students. Supervised students in a variety of school-related settings and activities. Monitored and evaluated student performance; followed required procedures and practices. Subjects covered: History, Physical Education, Math, English, and Spelling to children in grades K through 6th.
+</li>
+							</ul>
+					</div>
+					<div id="tab4">
+						<h2>Service Industry Employment History</h2>
+							<ul>
+								<li>Mex Tequila Bar at Power Plant Live!, 2016-Present. Manager: Matt Kniseley (410-528-0128)</li>
+								<li>Champps Americana, 2013-2016. Manager: Jordan Stewart (443-367-0333)</li>
+								<li>Mimi’s Café, 2010-2013. Manager: Bronwyn Bates (410-949-4948)</li>
+								<li>P.F. Chang’s China Bistro, 2007-2010. Manager: John Roemer (410-382-5059)</li>
+								<li>Ruby Tuesdays (White Marsh, 2005-2007) (Towson, 2004-2005). Manager Not Available. Restaurant Closed</li>
+								<li>Moxley’s Ice Cream Parlor, 2003-2004. Manager: Bryan Sykes (410-404-9316)</li>
+							</ul>
+					</div>
+					<div id="tab5">
+						<h2></h2><center>Video created by Steve Flint for the UMBC Practices in Public History course with Dr. Denise Meringolo. Images courtesy the Maryland Historical Society, Maryland State Archives, Medical Alumni Association of the University of Maryland, Inc., Library of Congress, University of Illinois, and University of Nebraska-Lincoln.</center>
+						<center><iframe width="554" height="240" src="https://www.youtube.com/embed/4E6T7G-tYf8" frameborder="0" allowfullscreen></iframe></center>
+					</div>
+					<div style="margin-top: 20px;" id="tab6">
+						<div class="questionOne">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<div class="row">
+								<div>What was Bootstrap originally called?</div>
+								</div>
+							</span>
+						</div>
+						<span class="input-group-addon">
+							<input type="radio" class="checkBox" aria-label="..."/>Vitas Code
+						</span>
+						<span class="input-group-addon">	
+							<input id="questionOne" type="radio" class="checkBox correct" aria-label="..."/>Twitter Blueprint
+						</span>
+						</div>
+						<div class="questionTwo hidden" >
+						<div class="input-group">
+							<span class="input-group-addon">
+								<div class="row">
+								<div >When was JQuery first released?</div>
+								</div>
+							</span>
+						</div>
+						<span class="input-group-addon">
+							<input id="questionTwo" type="radio" class="checkBox correct" aria-label="..."/>January 2006
+						</span>
+						<span class="input-group-addon">	
+							<input type="radio" class="checkBox" aria-label="..."/>June 2009
+						</span>
+						</div>
+						<div class="questionThree hidden">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<div class="row">
+								<div >Who invented JavaScript?</div>
+								</div>
+							</span>
+						</div>
+						<span class="input-group-addon">
+							<input id="questionThree" type="radio" class="checkBox correct" aria-label="..."/>Brendan Eich
+						</span>
+						<span class="input-group-addon">	
+							<input  type="radio" class="checkBox" aria-label="..."/>Mark Otto
+						</span>
+						</div>  
+						<div class="questionFour hidden">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<div class="row">
+								<div >Congratulations!</div>
+								</div>
+							</span>
+						</div>	
+						</div>
+					</div><!-- /input-group -->
+					
+				</div>
+			</div>
+			</div>	
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+/*<![CDATA[*/
+$( document ).ready(function() {
+   document.getElementById("objectiveDiv").style.border = "solid #000";
+ });
+$('#tab-wrapper li:first').addClass('active');
+$('#tab-body > div').hide();
+$('#tab-body > div:first').show();
+$('#tab-wrapper a').click(function() {
+    $('#tab-wrapper li').removeClass('active');
+    $(this).parent().addClass('active');
+    var activeTab = $(this).attr('href');
+    $('#tab-body > div:visible').hide();
+    $(activeTab).show();
+    return false;
+});
+/*]]>*/	
+$( ".checkBox" ).click(function() {
+  if ( $( this ).hasClass( "correct" ) ){
+  alert( "Correct! Click OK for the next question." );
+  //tie correct checkbox to entire question div
+ var questionID = $(this).attr('id');
+  if (questionID == "questionOne") {
+  $(".questionOne").addClass("hidden");
+  $(".questionTwo").removeClass("hidden");
+   
+	}
+	if (questionID == "questionTwo") {
+  $(".questionTwo").addClass("hidden");
+  $(".questionThree").removeClass("hidden");
+   
+	}
+	if (questionID == "questionThree") {
+  $(".questionThree").addClass("hidden");
+  $(".questionFour").removeClass("hidden");
+   
+	}
+
+	
+  }
+ else {
+  alert ("Incorrect! Click Ok and choose the correct answer.");
+ }
+ 
+});
+
+
+</script>
+
+</html>
