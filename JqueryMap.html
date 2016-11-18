@@ -7,9 +7,9 @@
 	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
-	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\lib\raphael.js"></script>
-	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\jquery.usmap.js"></script>
-	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\example\color.jquery.js"></script>
+	<script src="https://steveflint3.github.io/raphael.js"></script>
+	<script src="https://steveflint3.github.io/jquery.usmap.js"></script>
+	<script src="https://steveflint3.github.io/color.jquery.js"></script>
 	
 	
 </head>
@@ -41,8 +41,8 @@ margin: 0 0 0 1em;
 				
 				<div id="map" style="width: 600px; height: 450px;"></div>
 			</div>
-		</div>
-	</div>	
+		</div>	
+	</div>
 <script type="text/javascript">
 /*<![CDATA[*/
 var stateList = {'AL': 13, 
@@ -174,7 +174,9 @@ $('#map').usmap({
   // The click action
   click: function(event, data) {
   alert("clicked on: " + data.name);
-   
+    $('#clicked-state')
+      .text('You clicked: '+data.name)
+      .parent().effect('highlight', {color: '#C7F464'}, 7000);
   }
 });
 /*]]>*/	
@@ -184,3 +186,4 @@ $('#map').usmap({
 </script>
 </body>
 </html>
+
