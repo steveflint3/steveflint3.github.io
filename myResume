@@ -7,9 +7,6 @@
 	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
-	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\lib\raphael.js"></script>
-	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\jquery.usmap.js"></script>
-	<script src="C:\Users\bigchrisf\Downloads\us-map-master (1)\us-map-master\example\color.jquery.js"></script>
 	
 	
 </head>
