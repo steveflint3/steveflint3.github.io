@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>React tutorial</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.2/browser.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="lesson5challengestyling.css">
+	<style>
+	body {
+  padding: 40px;
+  font-family: "helvetica neue", sans-serif;
+}
+
+.container {
+  width: 300px;
+  margin: auto;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+.container h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 36px;
+}
+.container .btn {
+  border: 0;
+  padding: 15px;
+  margin: 10px;
+  width: 20%;
+  font-size: 15px;
+  outline: none;
+  border-radius: 3px;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.btn.blue-btn {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.btn.blue-btn:hover {
+   background-color: #6FC6FF;
+}
+
+.btn.blue-btn {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.btn.blue-btn:hover {
+   background-color: #6FC6FF;
+}
+
+.btn.green-btn {
+  background-color: #2ecc71;
+  box-shadow: 0px 5px 0px 0px #15B358;
+}
+
+.btn.green-btn:hover {
+  background-color: #48E68B;
+}
+
+.btn.purple-btn {
+  background-color: #9b59b6;
+  box-shadow: 0px 5px 0px 0px #82409D;
+}
+
+.btn.purple-btn:hover {
+  background-color: #B573D0;
+}
+.content{
+font-size:25px;
+color:white;
+font-weight:bold;
+background-color:red;
+}
+	</style>
+  </head>
+  
+  <body>
+    <div id="app"></div>
+    <script type="text/babel">
+	var FirstComponent = React.createClass({
+	  resetNumber:function() {
+	    this.setState({
+		  number: ''
+		})
+	  },
+	  xNine: function(event) {
+		if (this.state.number == '') {
+		alert ("Change count to a number other than zero.");
+	  }
+	    this.setState({
+		  number: +this.state.number * 9
+		})
+	  },
+	  xEight: function(event) {
+		if (this.state.number == '') {
+		alert ("Change count to a number other than zero.");
+	  }
+	    this.setState({
+		  number: +this.state.number * 8
+		})
+	  },
+	  xSeven: function(event) {
+		if (this.state.number == '') {
+		alert ("Change count to a number other than zero.");
+	  }
+	    this.setState({
+		  number: +this.state.number * 7
+		})
+	  },
+	  xSix: function(event) {
+		if (this.state.number == '') {
+		alert ("Change count to a number other than zero.");
+	  }
+	    this.setState({
+		  number: +this.state.number * 6
+		})
+	  },
+	  xFive: function(event) {
+		if (this.state.number == '') {
+		alert ("Change count to a number other than zero.");
+	  }
+	    this.setState({
+		  number: +this.state.number * 5
+		})
+	  },
+	  xFour: function(event) {
+		if (this.state.number == '') {
+		alert ("Change count to a number other than zero.");
+	  }
+	    this.setState({
+		  number: +this.state.number * 4
+		})
+	  },
+	  xOne: function(event) {
+		if (this.state.number == '') {
+		alert ("Change count to a number other than zero.");
+	  }
+	    this.setState({
+		  number: +this.state.number * 1
+		})
+	  },
+	  xTwo: function(event) {
+	  if (this.state.number == '') {
+		alert ("Change count to a number other than zero.");
+	  }
+	    this.setState({
+		  number: +this.state.number * 2
+		})
+	  },
+	  xThree: function(event) {
+	  if (this.state.number == '') {
+		alert ("Change count to a number other than zero.");
+	  }
+	    this.setState({
+		  number: +this.state.number * 3
+		})
+	  },
+	  minusNine: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number - 9
+		})
+	  },
+	  minusEight: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number - 8
+		})
+	  },
+	  minusSeven: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number - 7
+		})
+	  },
+	  minusSix: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number - 6
+		})
+	  },
+	  minusFive: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number - 5
+		})
+	  },
+	  minusFour: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number - 4
+		})
+	  },
+	  minusOne: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number - 1
+		})
+	  },
+	  minusTwo: function(event) {
+	  
+	    this.setState({
+		  number: +this.state.number - 2
+		})
+	  },
+	  minusThree: function(event) {
+	  
+	    this.setState({
+		  number: +this.state.number - 3
+		})
+	  },
+	  addNine: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number + 9
+		})
+	  },
+	  addEight: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number + 8
+		})
+	  },
+	  addSeven: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number + 7
+		})
+	  },
+	  addSix: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number + 6
+		})
+	  },
+	  addFive: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number + 5
+		})
+	  },
+	  addFour: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number + 4
+		})
+	  },
+	  addOne: function(event) {
+		
+	    this.setState({
+		  number: +this.state.number + 1
+		})
+	  },
+	  addTwo: function(event) {
+	  
+	    this.setState({
+		  number: +this.state.number + 2
+		})
+	  },
+	  addThree: function(event) {
+	  
+	    this.setState({
+		  number: +this.state.number + 3
+		})
+	  },
+	  getInitialState: function() {
+	    return {
+		  number: ''
+		}
+	  },
+	  render: function() {
+		let addOne = 1;
+		let addTwo = 2;
+		let addThree = 3;
+		let addFour = 4;
+		let addFive = 5;
+		let addSix = 6;
+		let addSeven = 7;
+		let addEight = 8;
+		let addNine = 9;
+		let minusOne = 1;
+		let minusTwo = 2;
+		let minusThree = 3;
+		let minusFour = 4;
+		let minusFive = 5;
+		let minusSix = 6;
+		let minusSeven = 7;
+		let minusEight = 8;
+		let minusNine = 9;
+		let xOne = 1;
+		let xTwo = 2;
+		let xThree = 3;
+		let xFour = 4;
+		let xFive = 5;
+		let xSix = 6;
+		let xSeven = 7;
+		let xEight = 8;
+		let xNine = 9;
+		return (
+		<div>
+		  <center><h1>Count: {this.state.number}</h1></center>
+		  <div className="row">
+		    <center>
+			  <h1 className="container content">Addition</h1>
+			</center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <button onClick={this.addOne} className="btn blue-btn container h1 button">Add {addOne}</button>
+			  <button onClick={this.addTwo} className="btn green-btn container h1 button">Add {addTwo}</button>
+			  <button onClick={this.addThree} className="btn purple-btn container h1 button">Add {addThree}</button>
+		    </center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <button onClick={this.addFour} className="btn blue-btn container h1 button">Add {addFour}</button>
+			  <button onClick={this.addFive} className="btn green-btn container h1 button">Add {addFive}</button>
+			  <button onClick={this.addSix} className="btn purple-btn container h1 button">Add {addSix}</button>
+			</center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <button onClick={this.addSeven} className="btn blue-btn container h1 button">Add {addSeven}</button>
+			  <button onClick={this.addEight} className="btn green-btn container h1 button">Add {addEight}</button>
+			  <button onClick={this.addNine} className="btn purple-btn container h1 button">Add {addNine}</button>
+			</center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <h1 className="container">Subtraction</h1>
+			</center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <button onClick={this.minusOne} className="btn blue-btn container h1 button">Subtract {minusOne}</button>
+			  <button onClick={this.minusTwo} className="btn green-btn container h1 button">Subtract {minusTwo}</button>
+			  <button onClick={this.minusThree} className="btn purple-btn container h1 button">Subtract {minusThree}</button>
+		    </center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <button onClick={this.minusFour} className="btn blue-btn container h1 button">Subtract {minusFour}</button>
+			  <button onClick={this.minusFive} className="btn green-btn container h1 button">Subtract {minusFive}</button>
+			  <button onClick={this.minusSix} className="btn purple-btn container h1 button">Subtract {minusSix}</button>
+			</center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <button onClick={this.minusSeven} className="btn blue-btn container h1 button">Subtract {minusSeven}</button>
+			  <button onClick={this.minusEight} className="btn green-btn container h1 button">Subtract {minusEight}</button>
+			  <button onClick={this.minusNine} className="btn purple-btn container h1 button">Subtract {minusNine}</button>
+			</center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <h1 className="container content">Multiplication</h1>
+			</center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <button onClick={this.xOne} className="btn blue-btn container h1 button">multiply by {xOne}</button>
+			  <button onClick={this.xTwo} className="btn green-btn container h1 button">multiply by {xTwo}</button>
+			  <button onClick={this.xThree} className="btn purple-btn container h1 button">multiply by {xThree}</button>
+		    </center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <button onClick={this.xFour} className="btn blue-btn container h1 button">multiply by {xFour}</button>
+			  <button onClick={this.xFive} className="btn green-btn container h1 button">multiply by {xFive}</button>
+			  <button onClick={this.xSix} className="btn purple-btn container h1 button">multiply by {xSix}</button>
+			</center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <button onClick={this.xSeven} className="btn blue-btn container h1 button">multiply by {xSeven}</button>
+			  <button onClick={this.xEight} className="btn green-btn container h1 button">multiply by {xEight}</button>
+			  <button onClick={this.xNine} className="btn purple-btn container h1 button">multiply by {xNine}</button>
+			</center>
+		  </div>
+		  <div className="row">
+		    <center>
+			<button onClick={this.resetNumber} className="btn btn container h1 button">Reset Number</button>
+		    </center>
+		  </div>
+		</div>  
+	    )
+	  }
+	});
+	ReactDOM.render(
+	  <FirstComponent />,
+	  document.getElementById('app')
+	);
+    </script>
+  </body>
+</html>
