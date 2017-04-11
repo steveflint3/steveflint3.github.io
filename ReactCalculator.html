@@ -163,11 +163,6 @@ background-color:red;
 		  number: +this.state.number * 3
 		})
 	  },
-	  x: function(value){
-	    this.setState({
-		  number: +this.state.number * value
-		})
-	  },
 	  minus: function(value){
 	    this.setState({
 		  number: +this.state.number - value
@@ -242,7 +237,7 @@ background-color:red;
 		  </div>
 		  <div className="row">
 		    <center>
-			  <h1 className="container">Subtraction</h1>
+			  <h1 className="container content">Subtraction</h1>
 			</center>
 		  </div>
 		  <div className="row">
@@ -273,23 +268,23 @@ background-color:red;
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.x.bind(this, 1)} className="btn blue-btn container h1 button">multiply by {xOne}</button>
-			  <button onClick={this.x.bind(this, 2)} className="btn green-btn container h1 button">multiply by {xTwo}</button>
-			  <button onClick={this.x.bind(this, 3)} className="btn purple-btn container h1 button">multiply by {xThree}</button>
+			  <button onClick={this.xOne} className="btn blue-btn container h1 button">multiply by {xOne}</button>
+			  <button onClick={this.xTwo} className="btn blue-btn container h1 button">multiply by {xTwo}</button>
+			  <button onClick={this.xThree} className="btn blue-btn container h1 button">multiply by {xThree}</button>
 		    </center>
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.x.bind(this, 4)} className="btn blue-btn container h1 button">multiply by {xFour}</button>
-			  <button onClick={this.x.bind(this, 5)} className="btn green-btn container h1 button">multiply by {xFive}</button>
-			  <button onClick={this.x.bind(this, 6)} className="btn purple-btn container h1 button">multiply by {xSix}</button>
+			  <button onClick={this.xFour} className="btn blue-btn container h1 button">multiply by {xFour}</button>
+			  <button onClick={this.xFive} className="btn blue-btn container h1 button">multiply by {xFive}</button>
+			  <button onClick={this.xSix} className="btn blue-btn container h1 button">multiply by {xSix}</button>
 			</center>
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.x.bind(this, 7)} className="btn blue-btn container h1 button">multiply by {xSeven}</button>
-			  <button onClick={this.x.bind(this, 8)} className="btn green-btn container h1 button">multiply by {xEight}</button>
-			  <button onClick={this.x.bind(this, 9)} className="btn purple-btn container h1 button">multiply by {xNine}</button>
+			  <button onClick={this.xSeven} className="btn blue-btn container h1 button">multiply by {xSeven}</button>
+			  <button onClick={this.xEight} className="btn blue-btn container h1 button">multiply by {xEight}</button>
+			  <button onClick={this.xNine} className="btn blue-btn container h1 button">multiply by {xNine}</button>
 			</center>
 		  </div>
 		  <div className="row">
