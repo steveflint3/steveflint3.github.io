@@ -178,34 +178,22 @@ background-color:red;
 		  number: ''
 		}
 	  },
+	  getDefaultProps: function(){
+	    return{
+		  valueOne: 1,
+		  valueTwo: 2,
+		  valueThree: 3,
+		  valueFour: 4,
+		  valueFive: 5,
+		  valueSix: 6,
+		  valueSeven: 7,
+		  valueEight: 8,
+		  valueNine: 9,
+		  textAdd: 'Add',
+		  textMinus: 'Subtract'
+		}
+	  },
 	  render: function() {
-		let addOne = 1;
-		let addTwo = 2;
-		let addThree = 3;
-		let addFour = 4;
-		let addFive = 5;
-		let addSix = 6;
-		let addSeven = 7;
-		let addEight = 8;
-		let addNine = 9;
-		let minusOne = 1;
-		let minusTwo = 2;
-		let minusThree = 3;
-		let minusFour = 4;
-		let minusFive = 5;
-		let minusSix = 6;
-		let minusSeven = 7;
-		let minusEight = 8;
-		let minusNine = 9;
-		let xOne = 1;
-		let xTwo = 2;
-		let xThree = 3;
-		let xFour = 4;
-		let xFive = 5;
-		let xSix = 6;
-		let xSeven = 7;
-		let xEight = 8;
-		let xNine = 9;
 		return (
 		<div>
 		  <center><h1>Count: {this.state.number}</h1></center>
@@ -216,23 +204,23 @@ background-color:red;
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.add.bind(this, 1)} className="btn blue-btn container h1 button">Add {addOne}</button>
-			  <button onClick={this.add.bind(this, 2)} className="btn green-btn container h1 button">Add {addTwo}</button>
-			  <button onClick={this.add.bind(this, 3)} className="btn purple-btn container h1 button">Add {addThree}</button>
-		    </center>
-		  </div>
-		  <div className="row">
-		    <center>
-			  <button onClick={this.add.bind(this, 4)} className="btn blue-btn container h1 button">Add {addFour}</button>
-			  <button onClick={this.add.bind(this, 5)} className="btn green-btn container h1 button">Add {addFive}</button>
-			  <button onClick={this.add.bind(this, 6)} className="btn purple-btn container h1 button">Add {addSix}</button>
+			  <Button style="btn blue-btn container h1 button" text={`${this.props.textAdd} ${this.props.valueOne}`} value={this.props.valueOne} clickHandler={this.add.bind(this,this.props.valueOne)}  />
+			  <Button style="btn green-btn container h1 button" text={`${this.props.textAdd} ${this.props.valueTwo}`} value={this.props.valueTwo} clickHandler={this.add.bind(this,this.props.valueTwo)} />
+			  <Button style="btn purple-btn container h1 button" text={`${this.props.textAdd} ${this.props.valueThree}`} value={this.props.valueThree} clickHandler={this.add.bind(this,this.props.valueThree)} />
 			</center>
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.add.bind(this, 7)} className="btn blue-btn container h1 button">Add {addSeven}</button>
-			  <button onClick={this.add.bind(this, 8)} className="btn green-btn container h1 button">Add {addEight}</button>
-			  <button onClick={this.add.bind(this, 9)} className="btn purple-btn container h1 button">Add {addNine}</button>
+			  <Button style="btn blue-btn container h1 button" text={`${this.props.textAdd} ${this.props.valueFour}`} value={this.props.valueFour} clickHandler={this.add.bind(this,this.props.valueFour)}  />
+			  <Button style="btn green-btn container h1 button" text={`${this.props.textAdd} ${this.props.valueFive}`} value={this.props.valueFive} clickHandler={this.add.bind(this,this.props.valueFive)} />
+			  <Button style="btn purple-btn container h1 button" text={`${this.props.textAdd} ${this.props.valueSix}`} value={this.props.valueSix} clickHandler={this.add.bind(this,this.props.valueSix)} />
+			</center>
+		  </div>
+		  <div className="row">
+		    <center>
+			  <Button style="btn blue-btn container h1 button" text={`${this.props.textAdd} ${this.props.valueSeven}`} value={this.props.valueSeven} clickHandler={this.add.bind(this,this.props.valueSeven)}  />
+			  <Button style="btn green-btn container h1 button" text={`${this.props.textAdd} ${this.props.valueEight}`} value={this.props.valueTwo} clickHandler={this.add.bind(this,this.props.valueTwo)} />
+			  <Button style="btn purple-btn container h1 button" text={`${this.props.textAdd} ${this.props.valueNine}`} value={this.props.valueThree} clickHandler={this.add.bind(this,this.props.valueThree)} />
 			</center>
 		  </div>
 		  <div className="row">
@@ -242,23 +230,23 @@ background-color:red;
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.minus.bind(this, 1)} className="btn blue-btn container h1 button">Subtract {minusOne}</button>
-			  <button onClick={this.minus.bind(this, 2)} className="btn green-btn container h1 button">Subtract {minusTwo}</button>
-			  <button onClick={this.minus.bind(this, 3)} className="btn purple-btn container h1 button">Subtract {minusThree}</button>
+			  <Button style="btn blue-btn container h1 button" text={`${this.props.textMinus} ${this.props.valueOne}`} value={this.props.valueOne} clickHandler={this.minus.bind(this,this.props.valueOne)}  />
+			  <Button style="btn green-btn container h1 button" text={`${this.props.textMinus} ${this.props.valueTwo}`} value={this.props.valueTwo} clickHandler={this.minus.bind(this,this.props.valueTwo)} />
+			  <Button style="btn purple-btn container h1 button" text={`${this.props.textMinus} ${this.props.valueThree}`} value={this.props.valueThree} clickHandler={this.minus.bind(this,this.props.valueThree)} />
 		    </center>
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.minus.bind(this, 4)} className="btn blue-btn container h1 button">Subtract {minusFour}</button>
-			  <button onClick={this.minus.bind(this, 5)} className="btn green-btn container h1 button">Subtract {minusFive}</button>
-			  <button onClick={this.minus.bind(this, 6)} className="btn purple-btn container h1 button">Subtract {minusSix}</button>
+			  <Button style="btn blue-btn container h1 button" text={`${this.props.textMinus} ${this.props.valueFour}`} value={this.props.valueFour} clickHandler={this.minus.bind(this,this.props.valueFour)}  />
+			  <Button style="btn green-btn container h1 button" text={`${this.props.textMinus} ${this.props.valueFive}`} value={this.props.valueFive} clickHandler={this.minus.bind(this,this.props.valueFive)} />
+			  <Button style="btn purple-btn container h1 button" text={`${this.props.textMinus} ${this.props.valueSix}`} value={this.props.valueSix} clickHandler={this.minus.bind(this,this.props.valueSix)} />
 			</center>
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.minus.bind(this, 7)} className="btn blue-btn container h1 button">Subtract {minusSeven}</button>
-			  <button onClick={this.minus.bind(this, 8)} className="btn green-btn container h1 button">Subtract {minusEight}</button>
-			  <button onClick={this.minus.bind(this, 9)} className="btn purple-btn container h1 button">Subtract {minusNine}</button>
+			  <Button style="btn blue-btn container h1 button" text={`${this.props.textMinus} ${this.props.valueSeven}`} value={this.props.valueSeven} clickHandler={this.minus.bind(this,this.props.valueSeven)}  />
+			  <Button style="btn green-btn container h1 button" text={`${this.props.textMinus} ${this.props.valueEight}`} value={this.props.valueEight} clickHandler={this.minus.bind(this,this.props.valueEight)} />
+			  <Button style="btn purple-btn container h1 button" text={`${this.props.textMinus} ${this.props.valueNine}`} value={this.props.valueNine} clickHandler={this.minus.bind(this,this.props.valueNine)} />
 			</center>
 		  </div>
 		  <div className="row">
@@ -268,23 +256,23 @@ background-color:red;
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.xOne} className="btn blue-btn container h1 button">multiply by {xOne}</button>
-			  <button onClick={this.xTwo} className="btn blue-btn container h1 button">multiply by {xTwo}</button>
-			  <button onClick={this.xThree} className="btn blue-btn container h1 button">multiply by {xThree}</button>
+			  <button onClick={this.xOne} className="btn blue-btn container h1 button">multiply by 1</button>
+			  <button onClick={this.xTwo} className="btn blue-btn container h1 button">multiply by 2</button>
+			  <button onClick={this.xThree} className="btn blue-btn container h1 button">multiply by 3</button>
 		    </center>
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.xFour} className="btn blue-btn container h1 button">multiply by {xFour}</button>
-			  <button onClick={this.xFive} className="btn blue-btn container h1 button">multiply by {xFive}</button>
-			  <button onClick={this.xSix} className="btn blue-btn container h1 button">multiply by {xSix}</button>
+			  <button onClick={this.xFour} className="btn blue-btn container h1 button">multiply by 4</button>
+			  <button onClick={this.xFive} className="btn blue-btn container h1 button">multiply by 5</button>
+			  <button onClick={this.xSix} className="btn blue-btn container h1 button">multiply by 6</button>
 			</center>
 		  </div>
 		  <div className="row">
 		    <center>
-			  <button onClick={this.xSeven} className="btn blue-btn container h1 button">multiply by {xSeven}</button>
-			  <button onClick={this.xEight} className="btn blue-btn container h1 button">multiply by {xEight}</button>
-			  <button onClick={this.xNine} className="btn blue-btn container h1 button">multiply by {xNine}</button>
+			  <button onClick={this.xSeven} className="btn blue-btn container h1 button">multiply by 7</button>
+			  <button onClick={this.xEight} className="btn blue-btn container h1 button">multiply by 8</button>
+			  <button onClick={this.xNine} className="btn blue-btn container h1 button">multiply by 9</button>
 			</center>
 		  </div>
 		  <div className="row">
@@ -296,6 +284,11 @@ background-color:red;
 	    )
 	  }
 	});
+	var Button = function(props){
+	  return(
+	    <button className={props.style} value={props.value} onClick={props.clickHandler}>{props.text}</button>
+	  )
+	};
 	ReactDOM.render(
 	  <FirstComponent />,
 	  document.getElementById('app')
